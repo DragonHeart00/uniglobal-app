@@ -1,0 +1,19 @@
+{
+  "name": "GodKänt – Körkort B",
+  "short_name": "GodKänt",
+  "description": "Träna inför teoriprovet för körkort B på svenska och arabiska.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f1226",
+  "theme_color": "#5b5bd6",
+  "lang": "sv",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}
