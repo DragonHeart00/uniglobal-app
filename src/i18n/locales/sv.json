@@ -1,0 +1,99 @@
+{
+  "app": {
+    "name": "GodKänt",
+    "tagline": "Körkort B – övning, prov & examen",
+    "languageLabel": "Svenska"
+  },
+  "nav": {
+    "home": "Hem",
+    "favorites": "Favoriter",
+    "about": "Om oss"
+  },
+  "home": {
+    "title": "Klara teoriprovet med självförtroende",
+    "subtitle": "Tusentals officiella körkortsfrågor – studera, testa eller gör en fullständig examen.",
+    "startCta": "Börja studera",
+    "examCta": "Gör en examen",
+    "stats": {
+      "questions": "Frågor",
+      "files": "Pärmar",
+      "perFile": "per pärm"
+    }
+  },
+  "modes": {
+    "title": "Välj läge",
+    "subtitle": "Hur vill du öva idag?",
+    "study": "Studera",
+    "studyDesc": "Se rätt svar direkt efter varje fråga.",
+    "test": "Testa",
+    "testDesc": "Svara på alla frågor och se resultatet i slutet.",
+    "exam": "Examen",
+    "examDesc": "70 slumpmässiga frågor. 52 rätt för att klara provet.",
+    "favorite": "Favoriter",
+    "favoriteDesc": "Repetera frågor du har sparat."
+  },
+  "files": {
+    "title": "Välj pärm",
+    "subtitle": "{{count}} frågor per pärm",
+    "item": "Pärm {{n}}",
+    "all": "Alla pärmar"
+  },
+  "test": {
+    "question": "Fråga",
+    "of": "av",
+    "next": "Nästa",
+    "previous": "Föregående",
+    "submit": "Avsluta",
+    "skip": "Hoppa över",
+    "favoriteAdd": "Spara",
+    "favoriteRemove": "Sparad",
+    "showImage": "Visa bild",
+    "correct": "Rätt",
+    "wrong": "Fel",
+    "yourAnswer": "Ditt svar",
+    "correctAnswer": "Rätt svar"
+  },
+  "done": {
+    "title": "Resultat",
+    "score": "Poäng",
+    "correct": "Rätt",
+    "wrong": "Fel",
+    "skipped": "Hoppade över",
+    "passed": "Godkänd",
+    "failed": "Underkänd",
+    "review": "Granska svar",
+    "retry": "Försök igen",
+    "home": "Till hem"
+  },
+  "favorites": {
+    "title": "Favoriter",
+    "empty": "Du har inte sparat några frågor ännu.",
+    "start": "Öva favoriter",
+    "clear": "Rensa alla"
+  },
+  "about": {
+    "title": "Om GodKänt",
+    "body": "GodKänt hjälper dig att förbereda dig inför det svenska teoriprovet för körkort B. Frågorna finns på svenska och arabiska – välj språk i menyn.",
+    "version": "Version"
+  },
+  "common": {
+    "back": "Tillbaka",
+    "close": "Stäng",
+    "yes": "Ja",
+    "no": "Nej",
+    "ok": "OK",
+    "loading": "Laddar…",
+    "language": "Språk",
+    "theme": "Tema",
+    "themeLight": "Ljust",
+    "themeDark": "Mörkt",
+    "themeSystem": "System",
+    "empty": "Inget att visa här ännu"
+  },
+  "toast": {
+    "favoriteAdded": "Sparad i favoriter",
+    "favoriteRemoved": "Borttagen från favoriter",
+    "favoritesCleared": "Favoriter rensade",
+    "noFavorites": "Inga favoriter att öva på"
+  }
+}
