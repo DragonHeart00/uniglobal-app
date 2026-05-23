@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "@tanstack/react-router";
+import { useNavigate, Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronLeft,
@@ -38,29 +38,37 @@ export function TestRunner() {
   const [revealed, setRevealed] = useState(false);
   const [imageOpen, setImageOpen] = useState(false);
 
-  // Guard: if session not active, bounce home
-  useEffect(() => {
-    if (!session.active) navigate({ to: "/" });
-  }, [session.active, navigate]);
-
+  // Restore prior selection when navigating between questions
   const q = session.questions[session.index];
   const total = session.questions.length;
   const mode = session.mode;
   const recorded = q ? session.answers[q.n] : undefined;
 
-  // Restore prior selection when navigating between questions
   useEffect(() => {
     if (!q) return;
     if (recorded) {
       setSelected(recorded.selected);
-      setRevealed(mode === "study"); // study reveals immediately
+      setRevealed(mode === "study");
     } else {
       setSelected(null);
       setRevealed(false);
     }
   }, [q?.n, recorded?.selected, mode]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  if (!q || !session.lang) return null;
+  // Graceful empty state instead of an instant redirect (no blink)
+  if (!session.active || !q || !session.lang) {
+    return (
+      <div className="mx-auto flex max-w-md flex-col items-center justify-center gap-4 py-20 text-center">
+        <h2 className="text-xl font-semibold">{t("test.noSession", "No active test")}</h2>
+        <p className="text-sm text-muted-foreground">
+          {t("test.noSessionDesc", "Start a new test from the home screen.")}
+        </p>
+        <Button asChild>
+          <Link to="/mode">{t("home.startCta")}</Link>
+        </Button>
+      </div>
+    );
+  }
 
   const isCorrect = (ans: string) => ans === q.correct;
   const fav = isFavorite(session.lang, q.n);
