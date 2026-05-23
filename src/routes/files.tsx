@@ -35,9 +35,12 @@ function FilesPage() {
   const startSession = useSessionStore((s) => s.start);
 
   const start = (folder: number | "all") => {
+    console.log("[files] start clicked", { folder, lang, mode });
     const raw = folder === "all" ? getAllQuestions(lang) : getQuestionsByFolder(lang, folder);
     const qs = prepareQuestions(raw, true);
+    console.log("[files] prepared", qs.length);
     startSession({ lang, mode, folder, questions: qs });
+    console.log("[files] navigating to /test");
     void navigate({ to: "/test" });
   };
 
